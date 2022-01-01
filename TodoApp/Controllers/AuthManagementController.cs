@@ -236,7 +236,7 @@ namespace TodoApp.Controllers
 				var dbUser = await _userManager.FindByIdAsync(storedToken.UserId);
 				return await GenerateJwtTokens(dbUser);
 			}
-			catch (Exception ex)
+			catch (Exception)
 			{
 				return null;
 			}
